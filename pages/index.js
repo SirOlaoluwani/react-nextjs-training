@@ -3,8 +3,6 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   return (
     <>
@@ -14,15 +12,21 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <p>HEADER</p>
-      </header>
-      <aside>
-        <p>SIDEBAR</p>
-      </aside>
-      <main>
-        <p>MAIN</p>
-      </main>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <p>HEADER</p>
+        </header>
+        <div className={styles.content}>
+          <aside className={styles.sidebar}>
+            <p>SIDEBAR</p>
+          </aside>
+          <main className={styles.main}>
+            <p>MAIN</p>
+          </main>
+        </div>
+        
+      </div>
+      
     </>
   )
 }
